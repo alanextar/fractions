@@ -8,32 +8,21 @@ namespace fractions
 {
     class Fractions
     {
+        public Fractions(double numerator, double denominator)
+        {
+            Numerator = numerator;
+            Denominator = denominator;
+        }
+
+        public Fractions() { }
         public double Numerator { get; set; }
         public double Denominator { get; set; }
 
-        public double Sum(double number)
+        public double Sum(double numerator, double denominator)
         {
-            return 1.0;
-        }
-
-        public double Sum(Fractions fraction)
-        {
-            return 1.0;
-        }
-
-        public double Subtraction(double number)
-        {
-            return 1.0;
-        }
-
-        public double Multiplication(double number)
-        {
-            return 1.0;
-        }
-
-        public double Dividing(double number)
-        {
-            return 1.0;
+            double sum = (this.Numerator * denominator + this.Denominator * numerator) / (this.Denominator * denominator);
+            Console.WriteLine(sum);
+            return sum;
         }
     }
 }
