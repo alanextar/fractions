@@ -20,11 +20,11 @@ namespace fractions
         Fractions fraction1 = new Fractions();
         Fractions fraction2 = new Fractions();
 
-        public Formula(Fractions fraction1, string operationType, Fractions fraction2)
+        public Formula(Fractions fraction1, OpType opType, Fractions fraction2)
         {
             this.fraction1 = fraction1;
             this.fraction2 = fraction2;
-            opType = (OpType)Enum.Parse(typeof(OpType), operationType);
+            this.opType = opType;
         }
         
         public double MathOperation()

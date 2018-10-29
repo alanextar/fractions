@@ -11,9 +11,9 @@ namespace fractions
     {
         static void Main(string[] args)
         {
-            Fractions fraction1 = new Fractions (2,3);
-            Fractions fraction2 = new Fractions (1,3);
-            Formula formula = new Formula(fraction1, "Sum", fraction2);
+            Fractions fraction1 = new Fractions (21,65);
+            Fractions fraction2 = new Fractions (3,4);
+            Formula formula = new Formula(fraction1, OpType.Sum , fraction2);
             Console.WriteLine(formula.MathOperation());
         }
     }
