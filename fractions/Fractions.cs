@@ -8,6 +8,9 @@ namespace fractions
 {
     class Fractions
     {
+        public double Numerator { get; set; }
+        public double Denominator { get; set; }
+
         public Fractions(double numerator, double denominator)
         {
             Numerator = numerator;
@@ -15,14 +18,12 @@ namespace fractions
         }
 
         public Fractions() { }
-        public double Numerator { get; set; }
-        public double Denominator { get; set; }
 
         public double Sum(double numerator, double denominator)
         {
-            double sum = (this.Numerator * denominator + this.Denominator * numerator) / (this.Denominator * denominator);
-            Console.WriteLine(sum);
-            return sum;
+            double fractionNumerator = this.Numerator * denominator + this.Denominator * numerator;
+            double fractionDenominator = this.Denominator * denominator;
+            return fractionNumerator/fractionDenominator;
         }
     }
 }

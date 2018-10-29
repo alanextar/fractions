@@ -13,8 +13,8 @@ namespace fractions
         {
             Fractions fraction1 = new Fractions (2,3);
             Fractions fraction2 = new Fractions (1,3);
-            //fraction1.sum(fraction2.numerator, fraction2.denominator);
             Formula formula = new Formula(fraction1, "Sum", fraction2);
+            Console.WriteLine(formula.MathOperation());
         }
     }
 }
