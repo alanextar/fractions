@@ -27,7 +27,7 @@ namespace fractions
             opType = (OpType)Enum.Parse(typeof(OpType), operationType);
         }
         
-        public double MathOperation(Fractions fraction1, OpType opType, Fractions fraction2)
+        public double MathOperation()
         {
             return fraction1.Sum(fraction2.Numerator, fraction2.Denominator);
         }
