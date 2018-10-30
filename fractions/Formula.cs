@@ -10,26 +10,51 @@ namespace fractions
     {
         Sum,
         Subtraction,
-        Dividing,
-        Multiplicaton
+        Multiplicaton,
+        Dividing
     };
 
     class Formula
     {
+        double fractionDouble1;
+        double fractionDouble2;
         public readonly OpType opType;
         Fractions fraction1 = new Fractions();
         Fractions fraction2 = new Fractions();
 
-        public Formula(Fractions fraction1, string operationType, Fractions fraction2)
+        public Formula(Fractions fraction1, OpType opType, Fractions fraction2)
         {
             this.fraction1 = fraction1;
             this.fraction2 = fraction2;
-            opType = (OpType)Enum.Parse(typeof(OpType), operationType);
+            this.opType = opType;
         }
-        
-        public double MathOperation()
+
+        public Formula(double fraction1, OpType opType, double fraction2)
         {
-            return fraction1.Sum(fraction2.Numerator, fraction2.Denominator);
+            fractionDouble1 = fraction1;
+            fractionDouble2 = fraction2;
+            this.opType = opType;
         }
+
+        public void MathOperation()
+        {
+            if ((int)opType == (int)OpType.Sum)
+            {
+                fraction1.Sum(fraction2);
+            }
+            else if ((int)opType == (int)OpType.Subtraction)
+            {
+                fraction1.Subtraction(fraction2);
+            }
+            else if ((int)opType == (int)OpType.Multiplicaton)
+            {
+                fraction1.Multiplication(fraction2);
+            }
+            else if ((int)opType == (int)OpType.Dividing)
+            {
+                fraction1.Dividing(fraction2);
+            }
+        }
+
     }
 }
