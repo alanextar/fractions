@@ -29,31 +29,17 @@ namespace fractions
             this.opType = opType;
         }
 
-        public Formula(double fraction1, OpType opType, double fraction2)
+        public Formula(Fractions fraction1, OpType opType, double fraction2)
         {
-            fractionDouble1 = fraction1;
+            this.fraction1 = fraction1;
             fractionDouble2 = fraction2;
             this.opType = opType;
+            this.fraction1.Sum(fractionDouble2);
         }
 
         public void MathOperation()
         {
-            if ((int)opType == (int)OpType.Sum)
-            {
-                fraction1.Sum(fraction2);
-            }
-            else if ((int)opType == (int)OpType.Subtraction)
-            {
-                fraction1.Subtraction(fraction2);
-            }
-            else if ((int)opType == (int)OpType.Multiplicaton)
-            {
-                fraction1.Multiplication(fraction2);
-            }
-            else if ((int)opType == (int)OpType.Dividing)
-            {
-                fraction1.Dividing(fraction2);
-            }
+            fraction1.Sum(fraction2);
         }
 
     }
