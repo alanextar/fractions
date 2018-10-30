@@ -33,6 +33,14 @@ namespace fractions
                 this.Denominator, fractionToCalculate.Numerator, fractionToCalculate.Denominator, ReduceFraction(fractionNumerator, fractionDenominator));
         }
 
+        public void Sum(double decimalFraction)
+        {
+            double fractionNumerator = this.Numerator * 10 + this.Denominator * (decimalFraction * 10);
+            double fractionDenominator = this.Denominator * 10;
+            Console.WriteLine("({0}/{1}) + {2} = {4}", this.Numerator,
+                this.Denominator, decimalFraction, ReduceFraction(fractionNumerator, fractionDenominator));
+        }
+
         public void Subtraction(Fractions fractionToCalculate)
         {
             double fractionNumerator = this.Numerator * fractionToCalculate.Denominator - this.Denominator * fractionToCalculate.Numerator;

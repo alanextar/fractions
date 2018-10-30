@@ -54,7 +54,6 @@ namespace fractions
             {
                 fraction1.Dividing(fraction2);
             }
-
         }
 
     }

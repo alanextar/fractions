@@ -12,8 +12,8 @@ namespace fractions
         static void Main(string[] args)
         {
             //for formula1 and formula2
-            Fractions fraction1 = new Fractions(2,3);
-            Fractions fraction2 = new Fractions(4,3);
+            Fractions fraction1 = new Fractions(1,2);
+            Fractions fraction2 = new Fractions(2.5);
 
             //for formula3 and formula4
             Fractions fraction3 = new Fractions(9);
