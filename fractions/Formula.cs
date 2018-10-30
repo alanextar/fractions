@@ -40,19 +40,19 @@ namespace fractions
         {
             if((int)opType == (int)OpType.Sum)
             {
-                fraction1.Sum(fraction2.Numerator, fraction2.Denominator);
+                fraction1.Sum(fraction2);
             }
             else if ((int)opType == (int)OpType.Subtraction)
             {
-                fraction1.Subtraction(fraction2.Numerator, fraction2.Denominator);
+                fraction1.Subtraction(fraction2);
             }
             else if ((int)opType == (int)OpType.Multiplicaton)
             {
-                fraction1.Multiplication (fraction2.Numerator, fraction2.Denominator);
+                fraction1.Multiplication (fraction2);
             }
             else if ((int)opType == (int)OpType.Dividing)
             {
-                fraction1.Dividing(fraction2.Numerator, fraction2.Denominator);
+                fraction1.Dividing(fraction2);
             }
 
         }
