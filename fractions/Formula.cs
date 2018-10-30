@@ -10,12 +10,14 @@ namespace fractions
     {
         Sum,
         Subtraction,
-        Dividing,
-        Multiplicaton
+        Multiplicaton,
+        Dividing
     };
 
     class Formula
     {
+        double fractionDouble1;
+        double fractionDouble2;
         public readonly OpType opType;
         Fractions fraction1 = new Fractions();
         Fractions fraction2 = new Fractions();
@@ -26,10 +28,31 @@ namespace fractions
             this.fraction2 = fraction2;
             this.opType = opType;
         }
-        
-        public double MathOperation()
+
+        public Formula(double fraction1, OpType opType, double fraction2)
         {
-            return fraction1.Sum(fraction2.Numerator, fraction2.Denominator);
+            fractionDouble1 = fraction1;
+            fractionDouble2 = fraction2;
+            this.opType = opType;
         }
+
+        public double MathOperation(Fractions fraction1, OpType opType, Fractions fraction2)
+        {
+            if((int)opType == (int)OpType.Sum)
+            {
+                return fraction1.Sum(fraction2.Numerator, fraction2.Denominator);
+            }
+            if ((int)opType == (int)OpType.Subtraction)
+            {
+                return fraction1.Subtraction(fraction2.Numerator, fraction2.Denominator);
+            }
+            return 1;
+
+        }
+
+        //public double MathOperation(double fractionDouble1, OpType opType, double fractionDouble2)
+        //{
+        //    return fraction1.Sum(fractionDouble2);
+        //}
     }
 }
