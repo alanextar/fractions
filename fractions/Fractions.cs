@@ -41,6 +41,11 @@ namespace fractions
                 this.Denominator, decimalFraction, ReduceFraction(fractionNumerator, fractionDenominator));
         }
 
+        internal void OpType()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Subtraction(Fractions fractionToCalculate)
         {
             double fractionNumerator = this.Numerator * fractionToCalculate.Denominator - this.Denominator * fractionToCalculate.Numerator;

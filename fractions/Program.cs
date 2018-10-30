@@ -22,16 +22,16 @@ namespace fractions
             if (fraction1.Denominator != 0)
             {
                 Formula formula1 = new Formula(fraction1, OpType.Sum, fraction2);
-                formula1.MathOperation(fraction1, OpType.Sum, fraction2);
+                formula1.MathOperation();
 
                 Formula formula2 = new Formula(fraction1, OpType.Subtraction, fraction2);
-                formula2.MathOperation(fraction1, OpType.Subtraction, fraction2);
+                formula2.MathOperation();
 
                 Formula formula3 = new Formula(fraction3, OpType.Dividing, fraction4);
-                formula3.MathOperation(fraction1, OpType.Dividing, fraction2);
+                formula3.MathOperation();
 
                 Formula formula4 = new Formula(fraction1, OpType.Multiplicaton, fraction2);
-                formula4.MathOperation(fraction1, OpType.Multiplicaton, fraction2);
+                formula4.MathOperation();
             }
             else
                 Console.WriteLine("Denominator can't be equal 0");

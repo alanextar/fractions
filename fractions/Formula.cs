@@ -36,9 +36,9 @@ namespace fractions
             this.opType = opType;
         }
 
-        public void MathOperation(Fractions fraction1, OpType opType, Fractions fraction2)
+        public void MathOperation()
         {
-            if((int)opType == (int)OpType.Sum)
+            if ((int)opType == (int)OpType.Sum)
             {
                 fraction1.Sum(fraction2);
             }
@@ -48,7 +48,7 @@ namespace fractions
             }
             else if ((int)opType == (int)OpType.Multiplicaton)
             {
-                fraction1.Multiplication (fraction2);
+                fraction1.Multiplication(fraction2);
             }
             else if ((int)opType == (int)OpType.Dividing)
             {
