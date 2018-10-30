@@ -25,33 +25,51 @@ namespace fractions
 
         public Fractions() { }
 
-        public double Sum(double numerator, double denominator)
+        public void Sum(double numerator, double denominator)
         {
             double fractionNumerator = this.Numerator * denominator + this.Denominator * numerator;
             double fractionDenominator = this.Denominator * denominator;
-            return ReduceFraction(fractionNumerator, fractionDenominator);
+            Console.WriteLine("({0}/{1}) + ({2}/{3}) = {4}", this.Numerator,
+                this.Denominator, numerator, denominator, ReduceFraction(fractionNumerator, fractionDenominator));
         }
 
-        public double Subtraction(double numerator, double denominator)
+        public void Subtraction(double numerator, double denominator)
         {
             double fractionNumerator = this.Numerator * denominator - this.Denominator * numerator;
             double fractionDenominator = this.Denominator * denominator;
-            return ReduceFraction(fractionNumerator, fractionDenominator);
+            Console.WriteLine("({0}/{1}) - ({2}/{3}) = {4}", this.Numerator,
+                this.Denominator, numerator, denominator, ReduceFraction(fractionNumerator, fractionDenominator));
         }
 
-        public double ReduceFraction(double numerator, double denominator)
+        public void Multiplication(double numerator, double denominator)
+        {
+            double fractionNumerator = this.Numerator * numerator;
+            double fractionDenominator = this.Denominator * denominator;
+            Console.WriteLine("({0}/{1}) x ({2}/{3}) = {4}", this.Numerator,
+                this.Denominator, numerator, denominator, ReduceFraction(fractionNumerator, fractionDenominator));
+        }
+
+        public void Dividing(double numerator, double denominator)
+        {
+            double fractionNumerator = this.Numerator * denominator;
+            double fractionDenominator = this.Denominator * numerator;
+            Console.WriteLine("({0}/{1}) : ({2}/{3}) = {4}", this.Numerator,
+                this.Denominator, numerator, denominator, ReduceFraction(fractionNumerator, fractionDenominator));
+        }
+
+        public string ReduceFraction( double numerator, double denominator)
         {
             if (numerator == denominator)
             {
-                return 1;
+                return 1.ToString();
             }
             else if (numerator == 0)
             {
-                return 0;
+                return 0.ToString();
             }
             else if ((numerator % denominator) == 0)
             {
-                return numerator / denominator;
+                return (numerator / denominator).ToString();
             }
 
             for (int i = 2; i < 10; i++)
@@ -62,16 +80,8 @@ namespace fractions
                     denominator = denominator / i;
                 }
             }
-            Console.WriteLine("{0}/{1}", numerator, denominator);
-            return numerator / denominator;
+            return numerator.ToString()+"/"+denominator.ToString();
         }
-
-        //public double Sum(double fraction)
-        //{
-        //    double result = fraction + Numerator / Denominator;
-        //    Console.WriteLine("{0}", result);
-        //    return result;
-        //}
 
     }
 }

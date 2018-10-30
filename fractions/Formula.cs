@@ -36,23 +36,26 @@ namespace fractions
             this.opType = opType;
         }
 
-        public double MathOperation(Fractions fraction1, OpType opType, Fractions fraction2)
+        public void MathOperation(Fractions fraction1, OpType opType, Fractions fraction2)
         {
             if((int)opType == (int)OpType.Sum)
             {
-                return fraction1.Sum(fraction2.Numerator, fraction2.Denominator);
+                fraction1.Sum(fraction2.Numerator, fraction2.Denominator);
             }
-            if ((int)opType == (int)OpType.Subtraction)
+            else if ((int)opType == (int)OpType.Subtraction)
             {
-                return fraction1.Subtraction(fraction2.Numerator, fraction2.Denominator);
+                fraction1.Subtraction(fraction2.Numerator, fraction2.Denominator);
             }
-            return 1;
+            else if ((int)opType == (int)OpType.Multiplicaton)
+            {
+                fraction1.Multiplication (fraction2.Numerator, fraction2.Denominator);
+            }
+            else if ((int)opType == (int)OpType.Dividing)
+            {
+                fraction1.Dividing(fraction2.Numerator, fraction2.Denominator);
+            }
 
         }
 
-        //public double MathOperation(double fractionDouble1, OpType opType, double fractionDouble2)
-        //{
-        //    return fraction1.Sum(fractionDouble2);
-        //}
     }
 }
