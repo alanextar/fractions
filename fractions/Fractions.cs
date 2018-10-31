@@ -8,9 +8,10 @@ namespace fractions
 {
     class Fractions
     {
-        double decimalFraction;
         public double Numerator { get; set; }
         public double Denominator { get; set; }
+
+        //Fractions fraction = new Fractions();
 
         public Fractions(double numerator, double denominator)
         {
@@ -20,7 +21,6 @@ namespace fractions
 
         public Fractions(double decimalFraction)
         {
-            this.decimalFraction = decimalFraction;
             this.Numerator = decimalFraction;
             this.Denominator = 1;
         }
@@ -41,54 +41,6 @@ namespace fractions
             double fractionNumerator = this.Numerator * 10 + this.Denominator * (decimalFraction * 10);
              double fractionDenominator = this.Denominator * 10;
             Console.WriteLine("({0}/{1}) + {2} = {3}", this.Numerator,
-                this.Denominator, decimalFraction, ReduceFraction(fractionNumerator, fractionDenominator));
-        }
-
-        public void Subtraction(Fractions fractionToCalculate)
-        {
-            double fractionNumerator = this.Numerator * fractionToCalculate.Denominator - this.Denominator * fractionToCalculate.Numerator;
-            double fractionDenominator = this.Denominator * fractionToCalculate.Denominator;
-            Console.WriteLine("({0}/{1}) - ({2}/{3}) = {4}", this.Numerator,
-                this.Denominator, fractionToCalculate.Numerator, fractionToCalculate.Denominator, ReduceFraction(fractionNumerator, fractionDenominator));
-        }
-
-        public void Subtraction(double decimalFraction)
-        {
-            double fractionNumerator = this.Numerator * 10 - this.Denominator * (decimalFraction * 10);
-            double fractionDenominator = this.Denominator * 10;
-            Console.WriteLine("({0}/{1}) - {2} = {3}", this.Numerator,
-                this.Denominator, decimalFraction, ReduceFraction(fractionNumerator, fractionDenominator));
-        }
-
-        public void Multiplication(Fractions fractionToCalculate)
-        {
-            double fractionNumerator = this.Numerator * fractionToCalculate.Numerator;
-            double fractionDenominator = this.Denominator * fractionToCalculate.Denominator;
-            Console.WriteLine("({0}/{1}) x ({2}/{3}) = {4}", this.Numerator,
-                this.Denominator, fractionToCalculate.Numerator, fractionToCalculate.Denominator, ReduceFraction(fractionNumerator, fractionDenominator));
-        }
-
-        public void Multiplication(double decimalFraction)
-        {
-            double fractionNumerator = this.Numerator * decimalFraction;
-            double fractionDenominator = this.Denominator;
-            Console.WriteLine("({0}/{1}) x {2} = {3}", this.Numerator,
-                this.Denominator, decimalFraction, ReduceFraction(fractionNumerator, fractionDenominator));
-        }
-
-        public void Dividing(Fractions fractionToCalculate)
-        {
-            double fractionNumerator = this.Numerator * fractionToCalculate.Denominator;
-            double fractionDenominator = this.Denominator * fractionToCalculate.Numerator;
-            Console.WriteLine("({0}/{1}) : ({2}/{3}) = {4}", this.Numerator,
-                this.Denominator, fractionToCalculate.Numerator, fractionToCalculate.Denominator, ReduceFraction(fractionNumerator, fractionDenominator));
-        }
-
-        public void Dividing(double decimalFraction)
-        {
-            double fractionNumerator = this.Numerator;
-            double fractionDenominator = this.Denominator * decimalFraction;
-            Console.WriteLine("({0}/{1}) : {2} = {3}", this.Numerator,
                 this.Denominator, decimalFraction, ReduceFraction(fractionNumerator, fractionDenominator));
         }
 

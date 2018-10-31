@@ -16,22 +16,12 @@ namespace fractions
             Fractions fraction2 = new Fractions(2.5);
 
             //for formula3 and formula4
-            double doubleFraction1 = 4.5;
-            double doubleFraction2 = 0.5;
+            double number = 4.5;
 
             if (fraction1.Denominator != 0)
             {
-                Formula formula1 = new Formula(fraction1, OpType.Sum, fraction2);
+                Formula formula1 = new Formula(number, OpType.Sum, fraction2);
                 formula1.MathOperation();
-
-                Formula formula2 = new Formula(doubleFraction1, OpType.Sum, fraction2);
-                formula2.MathOperation();
-
-                Formula formula3 = new Formula(fraction1, OpType.Sum, doubleFraction2);
-                formula3.MathOperation();
-
-                Formula formula4 = new Formula(doubleFraction1, OpType.Sum, doubleFraction2);
-                formula4.MathOperation();
             }
             else
                 Console.WriteLine("Denominator can't be equal 0");
