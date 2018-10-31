@@ -11,8 +11,6 @@ namespace fractions
         public double Numerator { get; set; }
         public double Denominator { get; set; }
 
-        //Fractions fraction = new Fractions();
-
         public Fractions(double numerator, double denominator)
         {
             Numerator = numerator;
@@ -39,7 +37,7 @@ namespace fractions
         public void Sum(double decimalFraction)
         {
             double fractionNumerator = this.Numerator * 10 + this.Denominator * (decimalFraction * 10);
-             double fractionDenominator = this.Denominator * 10;
+            double fractionDenominator = this.Denominator * 10;
             Console.WriteLine("({0}/{1}) + {2} = {3}", this.Numerator,
                 this.Denominator, decimalFraction, ReduceFraction(fractionNumerator, fractionDenominator));
         }

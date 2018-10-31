@@ -50,7 +50,15 @@ namespace fractions
 
         public void MathOperation()
         {
-            this.fraction1.Sum(fraction2);
+            if((int)opType == (int)OpType.Sum && fraction2.Denominator != 1)
+            {
+                this.fraction1.Sum(fraction2);
+            }
+            else if ((int)opType == (int)OpType.Sum && fraction2.Denominator == 1)
+            {
+                this.fraction1.Sum(fraction2.Numerator);
+            }
+
         }
 
     }
