@@ -52,9 +52,9 @@ namespace fractions
 
         public void MathOperation()
         {
-            switch ((int)opType)
+            switch (opType)
             {
-                case (int)OpType.Sum:
+                case OpType.Sum:
                     if (fraction2.Denominator != 1)
                     {
                         fraction1.Sum(fraction2);
@@ -62,7 +62,7 @@ namespace fractions
                     else 
                         fraction1.Sum(fraction2.Numerator);
                     break;
-                case (int)OpType.Subtraction:
+                case OpType.Subtraction:
                     if (fraction2.Denominator != 1)
                     {
                         fraction1.Subtraction(fraction2);
@@ -70,7 +70,7 @@ namespace fractions
                     else
                         fraction1.Subtraction(fraction2.Numerator);
                     break;
-                case (int)OpType.Multiplication:
+                case OpType.Multiplication:
                     if (fraction2.Denominator != 1)
                     {
                         fraction1.Multiplication(fraction2);
@@ -78,7 +78,7 @@ namespace fractions
                     else
                         fraction1.Multiplication(fraction2.Numerator);
                     break;
-                case (int)OpType.Dividing:
+                case OpType.Dividing:
                     if (fraction2.Denominator != 1)
                     {
                         fraction1.Dividing(fraction2);
