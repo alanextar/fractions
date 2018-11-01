@@ -70,8 +70,8 @@ namespace fractions
 
         public void Multiplication(double decimalFraction)
         {
-            double fractionNumerator = this.Numerator * decimalFraction;
-            double fractionDenominator = this.Denominator;
+            double fractionNumerator = this.Numerator * (decimalFraction * 10);
+            double fractionDenominator = this.Denominator * 10;
             Console.WriteLine("({0}/{1}) x {2} = {3}", this.Numerator,
                 this.Denominator, decimalFraction, ReduceFraction(fractionNumerator, fractionDenominator));
         }
@@ -86,8 +86,8 @@ namespace fractions
 
         public void Dividing(double decimalFraction)
         {
-            double fractionNumerator = this.Numerator;
-            double fractionDenominator = this.Denominator * decimalFraction;
+            double fractionNumerator = this.Numerator * 10;
+            double fractionDenominator = this.Denominator * (decimalFraction * 10);
             Console.WriteLine("({0}/{1}) : {2} = {3}", this.Numerator,
                 this.Denominator, decimalFraction, ReduceFraction(fractionNumerator, fractionDenominator));
         }
