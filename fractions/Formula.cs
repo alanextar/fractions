@@ -88,6 +88,5 @@ namespace fractions
                     break;
             }
         }
-
     }
 }

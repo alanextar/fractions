@@ -115,8 +115,8 @@ namespace fractions
                     denominator = denominator / i;
                 }
             }
+
             return numerator.ToString()+"/"+denominator.ToString();
         }
-
     }
 }
